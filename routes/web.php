@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\{PostsController,AuthController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::resources([
     'posts' => PostsController::class
 ]);
+Route::get("login",[AuthController::class,"loginForm"]);
