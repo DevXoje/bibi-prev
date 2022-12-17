@@ -22,3 +22,11 @@ a {
 .nav_link:hover {
     background-color: #c3957b;
 }
+
+.gallery {
+    display: flex;
+}
+
+.gallery_item {
+
+}

@@ -3,16 +3,15 @@
 
 @section('content')
     <h1>Blog</h1>
+    <h2>DE LA TEORÍA A LA PRÁCTICA</h2>
     @if (isset($books))
         @foreach ($books as $book)
+            <h3>{{ $book["title"]}}</h3>
+            <h4>{{ $book["subtitle"]}}</h4>
             <p>
-                Post=> <a href="/books/{{ $book->id }}">{{ $book->title }} </a>
-                @isset($book->user->login)
-                    ({{ $book->user->login }})
-                @endisset
+                <a href="{{ $book["link"] }}">Todo tuyo</a>
             </p>
 
-            {{-- {{ $books->links() }} --}}
         @endforeach
     @else
         <p>
@@ -20,6 +19,5 @@
         </p>
     @endif
     <hr>
-
 
 @endsection

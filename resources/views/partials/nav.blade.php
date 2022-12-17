@@ -5,13 +5,12 @@
      </button>--}}
 
     <ul class="navbar_nav">
-        <li class="nav-item"><a class="nav_link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav_link" href="/posts">Blog</a></li>
-        <li class="nav-item"><a class="nav_link" href="/posts">Recursos</a></li>
-        <li class="nav-item"><a class="nav_link" href="/posts">Galeria</a></li>
-        <li class="nav-item"><a class="nav_link" href="/posts">Sobre mi</a></li>
-        <li class="nav-item"><a class="nav_link" href="/posts">Contacto</a></li>
-        {{-- <li class="nav-item"><a class="nav-link" href="{{ route('posts.new_test') }}">newTest</a></li> --}}
+        <li class="nav-item"><a class="nav_link" href="{{ route('home') }}">Home</a></li>
+        <li class="nav-item"><a class="nav_link" href="{{ route('posts.index') }}">Blog</a></li>
+        <li class="nav-item"><a class="nav_link" href="{{ route('books.index') }}">Recursos</a></li>
+        <li class="nav-item"><a class="nav_link" href="{{ route('pictures.index') }}">Galeria</a></li>
+        <li class="nav-item"><a class="nav_link" href="{{ route('about') }}">Sobre mi</a></li>
+        <li class="nav-item"><a class="nav_link" href="{{ route('contact') }}">Contacto</a></li>
         {{--@if (auth()->check())
             <li class="nav-item"><a class="nav-link" href="/posts/crear">Creator</a>
             </li>

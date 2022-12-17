@@ -46,6 +46,7 @@ class PostsController extends Controller
         /* return $posts;
         $posts = Post::orderBy('title'); */
         //$users = User::orderBy('login')->get();
+        //return $posts;
         return view('posts.index', compact('posts'));
     }
 

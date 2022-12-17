@@ -7,19 +7,16 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('pictures', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 60);
-            //$table->string('subtitle', 60);
-            $table->text('content');
-            //$table->text('image');
-
+            $table->string("title");
+            $table->string("path");
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('pictures');
     }
 };

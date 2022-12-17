@@ -4,25 +4,27 @@
 @section('content')
     <h1>Blog</h1>
     @if (isset($posts))
-        @foreach ($posts as $post)
-            <p>
-                Post=> <a href="/posts/{{ $post->id }}">{{ $post->title }} </a>
-                @isset($post->user->login)
-                    ({{ $post->user->login }})
-                @endisset
-            </p>
-
-            {{-- {{ $posts->links() }} --}}
-        @endforeach
+        <div class="gallery">
+            @foreach ($posts as $post)
+                <div class="gallery_item">
+                    <a href="/posts/{{ $post->id }}">
+                        <img src="https://via.placeholder.com/150" alt="algo">
+                        <h2>{{ $post["title"]}}</h2>
+                        <p>{{ Str::limit($post["content"])}}</p>
+                    </a>
+                </div>
+                {{-- {{ $posts->links() }} --}}
+            @endforeach
+        </div>
     @else
         <p>
             No Hay post disponibles
         </p>
     @endif
-<hr>
+    <hr>
     <div id="other_call_to_action">
         <h2>Sigue mi blog</h2>
-        <p>blabla</p>{{--Repetido en home--}}
+        <p>Recibe nuevo contenido directamente en tu bandeja de entrada.</p>{{--Repetido en home--}}
         <form>
             <label for="mail_newsletter">algo</label>
             <input name="mail_newsletter" id="mail_newsletter" placeholder="algo">
